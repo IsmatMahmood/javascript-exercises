@@ -1,13 +1,9 @@
-const removeFromArray = function(arr, remove) {
-    for (i=0; i< arr.length;i++){
-        if (remove.includes(arr[i]))
-            console.log("true")
-        else
-            console.log("false")
+const removeFromArray = function (arr, ...args) {
+    let argsArr = Array.from(args);
+    for (i = 0; i < argsArr.length; i++) {
+        arr = arr.filter(x => x !== argsArr[i])
     }
-   // const result = arr.filter(x => remove.includes(x) != true )
-    
-   // return result;
+    return arr;
 };
 
 // Do not edit below this line
